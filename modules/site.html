@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content = "text/html charset = utf-8" />
+    <meta name = "description" content = ""/>
+    <meta name = "keywords" content = ""/>
+    <title>Заголовок сайта</title>
+    <style>
+        a{
+            border-right: 1px solid #000;
+            padding-right: 3px;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #f00;
+        }
+        a:last-child{
+            border: none;
+        }
+        article{
+            margin: 0 auto;
+            width: 400px;
+            border: 1px solid #c0c;
+            padding: 3px;
+            background: url(22.jpg) no-repeat;
+            background-size: cover;
+            box-shadow: 3px 3px 3px 3px #000;
+        }
+        article p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
+        article p.text{
+            font-size: 25pt;
+            text-shadow: 3px 3px 5px #f0f, -3px -3px 5px #f00;
+        }
+        body{
+            background: url("22.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        div{
+            width: 400px;
+            height: 400px;
+            border: 3px solid #000;
+            margin: 0 auto;
+        }
+
+
+        #block_1{
+            background: url(03.jpg) no-repeat, url(3.jpg) no-repeat right bottom;
+            background-size: 100% 90%, 100% 10%;
+            border-radius: 15px 15px 0 0;
+        }
+
+        #block_2{
+                border-radius: 15px;
+                margin-top: 20px;
+                background-color: rgba(255, 0, 0, 0.5);
+        }
+        #menu{
+            background-color: rgba(255, 128, 0, 0.5);
+        }
+        #menu ul{
+            background-color: rgba(255, 0, 0, 0.5);
+            width: 100px;
+            height: 20px;;
+            transition: height 1s;
+        }
+
+        #menu ul:hover{
+            height: 100px;
+        }
+        @keyframes anim {
+            0% {
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+            40% {
+                background-color: rgba(0, 0, 255, 0.5);
+            }
+            60% {
+                background-color: rgba(0, 255, 0, 0.5);
+            }
+            100% {
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+        }
+
+        #anim{
+            background-color: rgba(255, 255, 255, 0.5);
+            animation: anim 5s 2;
+        }
+    </style>
+</head>
+<body>
+      <!-- <h1>Музыка</h1>
+       <audio controls = "controls">
+           <source src = "Lil Wayne - You Da Shit.mp3" />
+       </audio>
+       <p>Nice music</p>
+       <video controls = "controls" width = "800px" height = "600px">
+           <source src = "Lil Wayne  No Ceilings (Pop Dat) (feat. Birdman).mp4" type = "video/mp4"/>
+           <source src = "Lil_Wayne_No_Ceilings_Pop_Dat_feat.webm" type = "video/webm"/>
+       </video>
+       <form name = "my_form" action = "site.html" method = "post" >
+           <table>
+               <tr>
+                   <td>Имя: </td>
+                       <td>
+                       <input type = "text" name = "firstname" autofocus = "autofocus" placeholder="Ваше имя"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>Фамилия: </td>
+                   <td>
+                       <input type = "text" name = "lastname" placeholder="Ваша фамилия"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>E-mail:</td>
+                   <td>
+                       <input type = "email" name = "email" placeholder = "Ваш e-mail"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>Дата рождения: </td>
+                   <td>
+                       <input type = "datetime-local" name = "date" placeholder="Дата рождения"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>Телефон: </td>
+                   <td>
+                       <input type = "tel" name = "tel" pattern = "8495-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Ваш телефон"/> приммер 8495-111-11-11
+                   </td>
+               </tr>
+               <tr>
+                   <td>Пароль: </td>
+                   <td>
+                       <input type = "password" name = "password" placeholder="Ввведите пароль"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>Пароль: </td>
+                   <td>
+                       <input type = "range" name = "password" placeholder="Ввведите пароль"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td colspan = "2">
+                       <input type = "submit" name = "go" />
+                   </td>
+               </tr>
+               <tr>
+                   <td colspan = "2">
+                       <progress value = "3" max = "10"></progress>
+                   </td>
+               </tr>
+               <tr>
+                   <td colspan = "2">
+                       <input type = "color" name = "color" />
+                   </td>
+               </tr>
+           </table>
+       </form>
+       <div>
+           <img id = "img_1" src="3.jpg" alt = "123" draggable="true" ondragstart = "dragStart(event)"/>
+           <img id = "img_2" src="03.jpg" alt = "123" draggable="true" ondragstart = "dragStart(event)"/>
+       </div>
+       <div ondrop = "drop(event)" ondragover="dragOver(event)">
+            Контейнер
+       </div>
+       <script type = "text/javascript">
+           function dragStart(event){
+               event.dataTransfer.setData("text/plain", event.target.id);
+           }
+           function dragOver(event){
+               event.preventDefault();
+           }
+           function drop(event){
+               event.preventDefault();
+               var img =  event.dataTransfer.getData("text/plain");
+               var new_img = document.getElementById(img).cloneNode(true);
+               event.target.appendChild(new_img);
+           }
+       </script>
+
+      <canvas id = "canvas" width = "500" height = "400"></canvas>
+    <script type = "text/javascript">
+        var can = document.getElementById("canvas").getContext("2d");
+        function drawTriangle(){
+            can.beginPath();
+            can.moveTo(10, 15);
+            can.lineTo(47, 20);
+            can.lineTo(30, 70);
+            can.closePath();
+            can.stroke();
+        }
+        drawTriangle();
+    </script>
+-->
+    <ul>
+        <a href = "#">Меню 1</a>
+        <a href = "#">Меню 2</a>
+        <a href = "#">Меню 3</a>
+    </ul>
+    <article>
+        <p>стандартов выбрать: html или xhtml. и для облегчения вашего выбора я решил разобрать разницу между html и xhtml. главное отличие между html и xhtml в том, что</p>
+        <p>Верстка - это самое первое что вы должны знать если хотить чтоб в будущем у вас не было проблем с пониманием всего остального</p>
+        <p>РНР нужно учить - это очен полезно!</p>
+        <p>Очень длинооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооое словввввввввввввввввввввввввввввввоооооооооооооооооооооо</p>
+        <p class="text">Текст с надписью</p>
+    </article>
+    <div id="block_1"></div>
+    <div id="block_2"></div>
+    <div id = "menu">
+        <ul>
+            <a href = "#">Меню</a>
+            <a href = "#">Подменю</a>
+        </ul>
+    </div>
+    <div id = "anim"></div>
+</body>
+</html>
