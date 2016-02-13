@@ -1,0 +1,41 @@
+body{
+    background: url("../images/bg.png") repeat;
+    font-family: Verdana, Arial, Tahoma;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#header img{
+    width: 1000px;
+}
+
+#header{
+    height: 148px;
+}
+
+#header div{
+    margin-top: -70px;
+    text-align: center;
+    width: 230px;
+}
+
+#header p{
+    margin: 0px;
+    font-size: 84%;
+}
+
+#header .red{
+    color: #ef0a05;
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#header .blue{
+    color: #1488be;
+}
