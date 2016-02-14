@@ -1,1 +1,0 @@
-# feezy_shop
