@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Интернет магазин</title>
     <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
     <meta name="description" content="Интернет магазин">
     <meta name="keywords" content="Интернет магазин">
     <link rel="stylesheet" href="styles/main.css" type="text/css">
-    <title>Интернет магазин</title>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var w = $(window).width();
+            if(w <= 768){
+                $('#left').html($('#left').html() + $('#right').html());
+                $('#right').remove();
+            }
+
+            if(w <= 600){
+                var h2 = $('#course h2');
+                $('#cource h2').remove();
+                $(h2).prependTo('#course');
+            }
+
+            if(w <= 468){
+                $('#top_sep').replaceWith('<br><br>');
+            }
+        });
+    </script>
 </head>
 <body>
     <div id="container">
@@ -55,10 +75,16 @@
             <div class="clear"></div>
             <div id="search">
                 <form name="search" action="#" method="get">
-                    <div>
-                        <input type="text" name="query" placeholder="Поиск"/>
-                        <input type="submit" name="seach" value=""/>
-                    </div>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="query" placeholder="Поиск"/>
+                            </td>
+                           <td>
+                               <input type="submit" name="seach" value=""/>
+                           </td>
+                       </tr>
+                    </table>
                 </form>
             </div>
             <div id="auth">
@@ -69,7 +95,7 @@
                         <input type="submit" name="auth" value="Войти"/>
                     </div>
                 </form>
-                <img src="images/bg_item_top.png" alt="" />
+                <img src="images/bg_item_top.png" alt="" id="top_sep"/>
                 <img src="images/icon_register.png" alt="" id="icon_register"/>
                 <a href="#" id="link_register">Регистрация</a>
                 <img src="images/bg_item_top.png" alt="" />
@@ -89,7 +115,7 @@
                         готовых скриптов, а только всё с нуля и прямо на Ваших глазах. Каждая строчка комментируется.
                         Но, главное, я рассказываю о своём подходе при создании движков.
                         Этот подход универсален и оптимален для сайтов любой функциональности: будь то социальная сеть
-                        или будь то поисковая система. Данный подход является лишь моими многолетними наработками.</p>
+                        или будь то поисковая система.</p>
                     <a href="#" class="more">Подробнее</a>
                 </section>
             </div>
@@ -247,10 +273,10 @@
                 </div>
             </div>
             <div id="center">
-                <div class="header">
-                    <h1><span class="border"></span>Как создать свой сайт</h1>
-                    <img src="images/site.png" alt=""/>
+                <div class="main">
                     <article>
+                        <h1>Как создать свой сайт</h1>
+                            <div class="main_img"><img src="images/site.png" alt=""/></div>
                         <p><b>Как создать свой сайт</b> – этот вопрос задаёт себе огромное количество людей, недаром он вводится только в одном Yandex примерно 1000 раз в сутки.
                             Не меньше сайтов пытаются ответить на этот вопрос. Я видел много страниц, посвящённых теме создания сайта, его регистрации и раскрутки. Но я за свою практику не встретил ни одного сайта, который объединил бы все эти неразделимые темы воедино.
                             И для восполнения этого пробела и был создан данный сайт.
@@ -275,23 +301,128 @@
                         <p>1) <a href="#">HTML</a>. Это язык, который является основой любого сайта, поэтому его просто необходимо знать.</p>
                     </article>
                 </div>
-                <div class="header">
-                    <h1>Свежие статьи</h1>
+                <div class="main">
+                    <h2 class="h1">Свежие статьи</h2>
                     <section>
                         <div class="article_img">
-                            <img src="images/article_img.jpg" alt="Где лучшекупить выделеный сервер?"/>
+                            <img src="images/article_img.jpg" alt="Где лучшекупить хорошие сникеры?"/>
                             <div>
                                 <img src="images/date.png" alt="" class="date_img" />
                                 <div class="date_text">25<br>янв</div>
                             </div>
                         </div>
-                            <h2>Где лучше купить выделеный сервер</h2>
-                            <p>В этой статье я расскажу Вам мою историю, а в конце расскажу где лучше покупать выделеный сервер</p>
-                            <a href="#" class="more">Прочитать</a>
+                        <h2>Где лучше купить выделеный сервер</h2>
+                        <p>В этой статье я расскажу Вам мою историю, а в конце расскажу где лучше покупать выделеный сервер. А
+                        теперь расскажу историю. Началось все с того, что мне надоело переплачивать за сникеры
+                        которые мне  очень нравились и тогра я подумал почему я сам не могу их привести себе и возможно
+                        помочь другим таким же как я любителям этого товара</p>
+                        <a href="#" class="more">Прочитать</a>
+                        <div class="clear"></div>
+                        <div class="article_info">
+                            <ul>
+                                <li>
+                                    <img src="images/icon_user.png" alt="" />
+                                </li>
+                                <li>Фанит Шириев</li>
+                                <li>2 комментария</li>
+                                <li>
+                                    <a href="#">PHP</a>
+                                </li>
+                                <li>
+                                    <a href="#">PHP Основы</a>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
                     </section>
+                    <h2 class="h1">Свежие статьи</h2>
+                    <section>
+                        <div class="article_img">
+                            <img src="images/article_img.jpg" alt="Где лучшекупить хорошие сникеры?"/>
+                            <div>
+                                <img src="images/date.png" alt="" class="date_img" />
+                                <div class="date_text">25<br>янв</div>
+                            </div>
+                        </div>
+                        <h2>Где лучше купить выделеный сервер</h2>
+                        <p>В этой статье я расскажу Вам мою историю, а в конце расскажу где лучше покупать выделеный сервер. А
+                            теперь расскажу историю. Началось все с того, что мне надоело переплачивать за сникеры
+                            которые мне  очень нравились и тогра я подумал почему я сам не могу их привести себе и возможно
+                            помочь другим таким же как я любителям этого товара. В этой статье я расскажу Вам мою историю, а в конце расскажу где лучше покупать выделеный сервер. А
+                            теперь расскажу историю. Началось все с того, что мне надоело переплачивать за сникеры
+                            которые мне  очень нравились и тогра я подумал почему я сам не могу их привести себе и возможно
+                            помочь другим таким же как я любителям этого товара</p>
+                        <a href="#" class="more">Прочитать</a>
+                        <div class="clear"></div>
+                        <div class="article_info">
+                            <ul>
+                                <li>
+                                    <img src="images/icon_user.png" alt="" />
+                                </li>
+                                <li>Фанит Шириев</li>
+                                <li>2 комментария</li>
+                                <li>
+                                    <a href="#">PHP</a>
+                                </li>
+                                <li>
+                                    <a href="#">PHP Основы</a>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </section>
+                    <h2 class="h1">Свежие статьи</h2>
+                    <section>
+                        <div class="article_img">
+                            <img src="images/article_img.jpg" alt="Где лучшекупить хорошие сникеры?"/>
+                            <div>
+                                <img src="images/date.png" alt="" class="date_img" />
+                                <div class="date_text">25<br>янв</div>
+                            </div>
+                        </div>
+                        <h2>Где лучше купить выделеный сервер</h2>
+                        <p>В этой статье я расскажу Вам мою историю, а в конце расскажу где лучше покупать выделеный сервер. А
+                            теперь расскажу историю. Началось все с того, что мне надоело переплачивать за сникеры
+                            которые мне  очень нравились и тогра я подумал почему я сам не могу их привести себе и возможно
+                            помочь другим таким же как я любителям этого товара</p>
+                        <a href="#" class="more">Прочитать</a>
+                        <div class="clear"></div>
+                        <div class="article_info">
+                            <ul>
+                                <li>
+                                    <img src="images/icon_user.png" alt="" />
+                                </li>
+                                <li>Фанит Шириев</li>
+                                <li>2 комментария</li>
+                                <li>
+                                    <a href="#">PHP</a>
+                                </li>
+                                <li>
+                                    <a href="#">PHP Основы</a>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </section>
+                    <div id=pagination>
+                        <span>Первая</span>
+                        <span>Предыдущая</span>
+                        <span class="active">1</span>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">Следующая</a>
+                        <a href="#">Последняя</a>
+                    </div>
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
+        <footer>
+            <div class="sep">
+
+            </div>
+            <p>Copyright &copy; 2016 Шириев Фанит. Все права защищены</p>
+        </footer>
     </div>
 </body>
 </html>

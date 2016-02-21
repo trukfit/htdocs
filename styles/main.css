@@ -40,6 +40,10 @@ header h1{
     font-size: 210%;
 }
 
+input{
+    outline: none;
+}
+
 #topMenu{
     padding: 0;
     float: right;
@@ -55,7 +59,7 @@ header h1{
     display: block;
     background: url("../images/bg_item.png") no-repeat right top;
     color: #fdfeff;
-    padding: 9px 14px 7px;
+    padding: 9px 9px 7px;
     text-decoration: none;
 }
 
@@ -63,7 +67,7 @@ header h1{
     background-color: #086d97;
     border: 1px solid #06445e;
     border-radius: 5px;
-    padding: 8px 13px 6px;
+    padding: 8px 8px 6px;
 }
 
 #top{
@@ -76,14 +80,14 @@ header h1{
 
 #search{
     float:left;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 #search input[type='text']{
     background-color: #f7f7f7;
     border: none;
     border-radius: 5px 0 0 5px;
-    height: 21px;
+    height: 20px;
     width: 263px;
     padding-left: 5px;
     color: #23252b;
@@ -134,7 +138,7 @@ header h1{
     color: #c8404b;
     float: left;
     text-decoration: none;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 #icon_register{
@@ -161,12 +165,12 @@ header h1{
     background: url("../images/bg_slider.png") repeat;
     border-bottom: 4px solid #fff;
     margin-top: 5px;
-    padding-top: 15px;
+    padding: 20px 0;
 }
 
 #course{
     margin: 0 auto;
-    min-width: 750px;
+    min-width: 850px;
     width: 60%;
 }
 
@@ -359,7 +363,7 @@ header h1{
 }
 
 .block .free img{
-    width: 200px;
+    width: 100%;
 }
 
 .block .free p{
@@ -376,12 +380,12 @@ header h1{
     border: 1px solid #a9b4bb;
     border-radius: 5px;
     height: 20px;
-    width: 133px;
+    width: 123px;
     padding: 0 5px;
 }
 
 .block .free input[type='text']:focus{
-    background-color: #ee4e10;
+    border: 1px solid #ee4e10;
 }
 
 .block .free label{
@@ -407,55 +411,17 @@ header h1{
 }
 
 #center{
-    width: 870px;
+    max-width: 875px;
     border-radius: 5px;
     margin: 0 auto;
-
-    border: 1px solid #fff;
 }
 
-#center .header .main_article{
 
-}
-
-#center .header{
-    padding-top: 15px;
+.main{
+    padding: 10px;
     background: linear-gradient(180deg, #fff 0%, #f6f6f6 50%, #f5f5f5 51%, #e6e6e6 100%);
-    width: 100%;
-}
-
-#center .header h1{
-    border-left: 2px solid #086d97;
-    padding-left: 10px;
-    margin-top: 20px;
-    margin-left: 10px;
-    color: #604953;
-    font-weight: normal;
-    font-size: 160%;
-}
-
-.header img{
-    margin-left: 320px;
-    box-shadow: 4px 4px 4px #717c82;
-}
-
-.header p{
-    padding: 0 10px;
-    color: #444953;
-    font-size: 97%;
-}
-
-.header .red{
-    color: #c8504b;
-}
-
-.header a{
-    color: #3166a8;
-    text-decoration: none;
-}
-
-.header a:hover{
-    text-decoration: underline;
+    border: 2px solid #fff;
+    overflow: hidden;
 }
 
 .main h1, .main h2{
@@ -463,9 +429,714 @@ header h1{
     font-weight: normal;
 }
 
+section{
+    margin-bottom: 20px;
+}
+
+.main h1, .main .h1{
+    border-left: 2px solid #2aa1d3;
+    padding-left: 5px;
+}
+
+.main .main_img img{
+    margin-left: 320px;
+    box-shadow: 4px 4px 4px #717c82;
+}
+
+.main .article_img{
+    float: left;
+    width: 230px;
+    margin-right: 15px;
+    margin-bottom: 7px;
+}
+
+.main .article_img img{
+    box-shadow: 4px 5px 3px #545454;
+    width: 100%;
+    border: 2px solid #fff;
+}
+
+.main p{
+    color: #444953;
+    text-indent: 10px;
+    font-size: 105%;
+}
+
+.main .red{
+    color: #c8504b;
+}
+
+.main a{
+    color: #006699;
+    text-decoration: none;
+}
+
+.main a:hover{
+    text-decoration: underline;
+}
+
+.date_img{
+    height: 52px;
+    width: 52px !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
 .date_text{
     color:#fff;
     font-size: 90%;
-    margin-top: -40px;
+    margin-top: -43px;
     text-align:center;
+    width: 53px;
+}
+
+.article_img > div{
+    margin-top: -45px;
+    margin-left: -10px;
+}
+
+.main h2{
+    margin: 5px 5px;
+}
+
+.main .more{
+    background: url("../images/arrow_more.png") no-repeat 97% center #f0b017;
+    border: 1px solid #976c05;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    float: right;
+    padding: 2px 20px 3px 10px;
+    text-decoration: none;
+}
+
+.main .more:hover{
+    border-radius: 0;
+    text-decoration: none;
+}
+
+.article_info{
+    background-color: #b1cad5;
+    font-size: 90%;
+    margin: 10px -10px 0;
+    padding: 3px 0;
+}
+
+.article_info ul{
+    margin: 0;
+    padding: 0;
+}
+
+.article_info li{
+    float: left;
+    padding: 0 25px 0 0;
+    color: #444953
+}
+
+.article_info li:first-child{
+    list-style: none;
+    margin-left: 10px;
+}
+
+.article_info li:last-child{
+    margin-right: 20px;
+}
+
+#pagination{
+text-align: center;
+}
+
+#pagination .active{
+    font-weight: bold;
+    color: #01386a;
+}
+
+#pagination span, #pagination a{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+footer{
+    background: linear-gradient(180deg, #4796d8, #096e98);
+    text-align: center;
+    border-bottom: 1px solid #05435e;
+    color: #fff;
+    padding: 5px 0;
+}
+
+footer .sep{
+    border-top: 1px dashed #033246;
+    height: 8px;
+    width: 99%;
+    margin: 0 auto;
+}
+
+footer p{
+    margin: 0;
+}
+
+/*
+Адаптивная верстка под ширину 1024px
+*/
+
+@media  screen and (max-width: 1024px){
+
+    #topMenu a{
+        padding: 9px 15px 7px;
+    }
+
+    #topMenu a:hover, #topMenu a.active{
+        padding: 8px 14px 6px;
+    }
+
+    #center{
+        display: block;
+       width: 525px;
+    }
+
+    .main .main_img img{
+        margin-left: 130px;
+    }
+
+}
+
+/*
+Адаптивная верстка под ширину 768px
+*/
+
+@media  screen and (max-width: 768px){
+    header{
+        background: linear-gradient(180deg, #5aa1dc 0%, #3a8cbc 54%, #227eba 55%, #096e98 100%);
+        height: 86px;
+        text-align: center;
+    }
+
+    header h1{
+        float: none;
+    }
+
+    #topMenu{
+        float: none;
+    }
+
+    #topMenu a{
+        padding: 9px 11px 7px;
+    }
+
+    #topMenu a:hover, #topMenu a.active{
+        padding: 9px 10px 7px;
+    }
+
+    #search{
+        margin-top: 3px;
+    }
+
+    #search input[type='text']{
+         width: 140px;
+        height: 19px;
+     }
+
+    #search input[type='submit']{
+       margin-top: 2px;
+        height: 21px;
+    }
+
+    #auth form{
+        margin-top: 2px;
+    }
+
+    #auth input[type='text'], #auth input[type='password']{
+        width: 78px;
+    }
+
+    #icon_register{
+        margin-top: 4px !important;
+    }
+
+    #link_register{
+        margin-top: 3px !important;
+    }
+
+    #slider #course{
+        min-width: 0;
+        width: 95%;
+    }
+
+    #center{
+        margin-right: 0;
+    }
+
+    .main .main_img img{
+        margin-left: 135px;
+    }
+
+}
+
+/*
+Адаптивная верстка под ширину 600px
+*/
+
+@media  screen and (max-width: 600px){
+
+    header{
+        background: linear-gradient(180deg, #5aa1dc 0%, #3a8cbc 57%, #227eba 58%, #096e98 100%);
+        height: 80px;
+        padding: 12px 5px 0;
+    }
+
+    #topMenu{
+        font-size: 90%;
+    }
+
+    #topMenu a{
+        padding: 9px 6px 7px;
+    }
+
+    #topMenu a:hover, #topMenu a.active{
+        padding: 8px 5px 6px;
+    }
+
+    #top{
+        height: 73px;
+        padding-top: 2px;
+    }
+
+    #search{
+        float: none;
+    }
+
+    #search table{
+        margin: 0 auto;
+    }
+
+    #auth input[type='text'], #auth input[type='password']{
+        width: 90px;
+    }
+
+    #slider #course{
+        text-align: center;
+    }
+
+    #slider #course img{
+        float: none;
+    }
+
+    .main .article_img{
+        margin: 0 auto;
+        text-align: center;
+        float: none;
+    }
+
+    .main .main_img img{
+        margin-left: 45px;
+    }
+
+    .date_text{
+        margin-top: -46px;
+    }
+
+    .date_img{
+        margin-left: -186px;
+    }
+
+    .main h2{
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .article_info li:nth-child(3){
+        float: none;
+    }
+
+    .article_info li:nth-child(4){
+        margin-left: 9px;
+    }
+
+}
+
+/*
+Адаптивная верстка под ширину 568px */
+
+@media  screen and (max-width: 568px){
+
+    #topMenu{
+        font-size: 80%;
+    }
+
+
+    #auth input[type='text'], #auth input[type='password']{
+        width: 75px;
+    }
+
+    .block{
+        width: 180px;
+    }
+
+    #subscribe_vk_sep{
+        width: 100%;
+    }
+
+    #center{
+        margin-left: 190px;
+    }
+
+    #left nav{
+        font-size: 90%;
+    }
+
+    .block .free input[type='text']{
+        width: 85px;
+    }
+
+}
+
+/*
+Адаптивная верстка под ширину 480px */
+
+@media  screen and (max-width: 480px){
+
+    header{
+        background: linear-gradient(180deg, #5aa1dc 0%, #3a8cbc 62%, #227eba 63%, #096e98 100%);
+        height: 72px;
+        padding: 12px 5px 0;
+    }
+
+    #top{
+        height: 105px;
+        padding-top: 2px;
+    }
+
+    #topMenu{
+        font-size: 70%;
+    }
+
+    #topMenu a{
+        padding: 7px 5px 7px;
+    }
+
+    #topMenu a:hover, #topMenu a.active{
+        padding: 6px 4px 6px;
+    }
+
+    #auth{
+        float: none;
+        text-align: center;
+    }
+
+    form[name='auth']{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #icon_register{
+        margin-left: 22% !important;
+    }
+
+    .main .main_img img{
+        margin-left: 0;
+    }
+
+    .article_info li:nth-child(2){
+        float: none;
+    }
+
+    .article_info li:nth-child(3){
+        margin: 2px 0 2px 9px;
+    }
+}
+
+/*
+Адаптивная верстка под ширину 384px */
+
+@media  screen and (max-width: 384px){
+
+    #topMenu{
+        font-size: 55%;
+    }
+
+    #topMenu a{
+        padding: 7px 2px 7px;
+    }
+
+    #topMenu a:hover, #topMenu a.active{
+        padding: 6px 1px 6px;
+    }
+
+    #icon_register{
+        margin-left: 15% !important;
+    }
+
+    #slider{
+        font-size: 90%;
+    }
+
+    .block{
+        font-size: 80%;
+        width: 120px;
+    }
+
+    .block nav div div{
+        padding-left: 10px;
+    }
+
+    .block .button{
+        padding: 3px 10px;
+    }
+
+    .block #subscribe .button, .block #vk .button, .block #poll .button{
+        font-size: 90%;
+        margin-top: 7px;
+    }
+
+    .block #subscribe .button{
+        margin-left: 12px;
+    }
+
+    .block #vk .button{
+        margin-left: 15px;
+    }
+
+    .block #subscribe_vk img{
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .block #subscribe{
+        margin-bottom: 10px;
+    }
+
+    .block .free label{
+        font-size: 80%;
+    }
+
+    .block .free table{
+        border-collapse: collapse;
+    }
+
+    .block .free td{
+        padding: 3px 0;
+    }
+
+    .block .free input[type='text']{
+        width: 65px;
+        height: 15px;
+    }
+
+    .block .content > div{
+        padding: 0 3px;
+    }
+
+    #center{
+        margin-left: 130px;
+    }
+
+    .main .main_img img{
+        width: 174px;
+    }
+
+    .main .article_img{
+        width: 174px;
+    }
+
+    .main h1, .main .h1{
+        margin: 5px 0;
+    }
+
+    .date_img{
+        margin-left: -130px;
+    }
+
+
+    .free input[name='free_course']{
+        margin-left: 4px;
+    }
+
+
+    .block .free a{
+        margin-top: 5px;
+        margin-left: 4px;
+    }
+
+    #link_register{
+        font-size: 90%;
+    }
+
+}
+
+
+/*
+Адаптивная верстка под ширину 320px */
+
+@media  screen and (max-width: 320px){
+    header h1{
+        font-size: 180%;
+    }
+
+    header{
+        background: linear-gradient(180deg, #5aa1dc 0%, #3a8cbc 64%, #227eba 65%, #096e98 100%);
+        height: 63px;
+        padding: 12px 5px 0;
+    }
+
+    #topMenu{
+        font-size: 48%;
+    }
+
+    #topMenu a{
+        padding: 7px 3px 7px;
+    }
+
+    #topMenu a:hover, #topMenu a.active{
+        padding: 6px 2px 6px;
+    }
+
+    #top{
+        font-size: 90%;
+    }
+
+    #icon_register{
+        margin-left: 10% !important;
+    }
+
+    #course img{
+        width: 240px;
+    }
+
+    .main .main_img img{
+        width: 124px;
+    }
+
+    .main .article_img{
+        width: 124px;
+    }
+
+    .main {
+        font-size: 90%;
+    }
+
+    .date_img{
+        margin-left: -83px;
+    }
+
+    .article_info li:nth-child(4){
+        float: none;
+    }
+
+    .article_info li:nth-child(5){
+        margin: 2px 0 2px 9px;
+    }
+
+}
+
+/*
+Адаптивная верстка под ширину 240px */
+
+@media  screen and (max-width: 275px){
+
+    header h1{
+        font-size: 170%;
+    }
+
+    header{
+        background: linear-gradient(180deg, #5aa1dc 0%, #3a8cbc 64%, #227eba 65%, #096e98 100%);
+        height: 60px;
+        padding: 5px 0;
+    }
+
+    #topMenu{
+        font-size: 43%;
+    }
+
+    #topMenu a{
+        padding: 7px 2px 7px;
+    }
+
+    #topMenu a:hover, #topMenu a.active{
+        padding: 6px 1px 6px;
+    }
+
+    #top{
+        font-size: 75%;
+        height: 95px;
+        padding: 0 5px;
+    }
+
+    #links_reset{
+        margin-top: 2px;
+    }
+
+    #link_register{
+        margin-top: 5px !important;
+    }
+
+    #auth input[type='submit']{
+        margin-left: 0;
+    }
+
+    #auth input[type='text'], #auth input[type='password']{
+        width: 60px;
+    }
+
+    #course img{
+        width: 200px;
+    }
+
+    .block{
+        width: 90px;
+        font-size: 57%;
+    }
+
+    #icon_register{
+        margin-left: 14% !important;
+    }
+
+    .block #subscribe .button, .block #poll .button{
+       margin-left: 10px;
+    }
+
+    .block #vk .button{
+        margin-left: 10px;
+    }
+
+    .block .free input[type='text']{
+        width: 43px;
+    }
+
+    .block .button{
+        padding: 3px 6px;
+    }
+
+    #center{
+        margin-left: 95px;
+    }
+
+    .main .main_img img{
+        width: 120px;
+    }
+
+    .main .article_img{
+        width: 120px;
+    }
+
+    .main {
+        font-size: 80%;
+    }
+
+    .date_img{
+        margin-left: -76px;
+    }
+
+    .date_text{
+        margin-top: -40px;
+    }
+
+    .article_info li:nth-child(4){
+        float: none;
+    }
+
+    .article_info li:nth-child(5){
+        margin: 2px 0 2px 9px;
+    }
+
 }
