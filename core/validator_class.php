@@ -30,5 +30,13 @@ abstract class Validator{
    protected function setErrors($code){
      $this->errors[] = $code;
    }
+
+   protected function isContainQuotes($string){
+      $array = array("\"", "'", "`", "&quot;", "&apos;");
+      foreach($array as $value){
+         if(strpos($string, $value) !== false) return true;
+      }
+      return false;
+   }
 }
 ?>
