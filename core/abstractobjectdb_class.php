@@ -144,6 +144,10 @@ abstract class AbstractObjectDb{
       return self::getCountOnWhere($class::$table, false, false);
    }
 
+   protected static function getCountOnField($table_name, $field, $value){
+      return self::getCountOnWhere($table_name, "`$field` =".self::$db->getSQ(), array($value));
+   }
+
    public static function getAllOnField($table_name, $class, $field, $value, $order = false, $ask = true, $count = false, $offset = false){
       return self::getAllOnWhere($table_name, $class, false, false, $order, $ask, $count, $offset);
    }
@@ -279,6 +283,10 @@ abstract class AbstractObjectDb{
 
    protected static function hash($str, $secret = ""){
       return md5($str.$secret);
+   }
+
+   protected function getKey(){
+      return uniqid();
    }
 
    private function getSelectFields(){

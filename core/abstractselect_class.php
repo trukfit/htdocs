@@ -53,6 +53,11 @@ class AbstractSelect{
       return $this->where($where, $values, $and);
    }
 
+   public function whereFIS($col_name, $value, $and = true){
+      $where = "FIND_IN_SET(".$this->db->getSQ().",`$col_name`) > 0";
+      return $this->where($where, array($value), $and);
+   }
+
    public function order($field, $ask = true){
       if(is_array($field)){
          $this->order = "ORDER BY ";
